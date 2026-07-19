@@ -1,0 +1,35 @@
+LTS Rutherford Cable Workflow
+=============================
+
+Copyright 2026 ETH Zurich (Institute of Electromagnetic Fields)
+Copyright 2026 Paul Scherrer Institut
+
+This product includes software developed at ETH Zurich
+(https://ief.ee.ethz.ch/) and at the Paul Scherrer Institut
+(https://www.psi.ch/) in support of the SMACC magnet programme.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+This software is a companion release for the peer-reviewed publication:
+
+    Van den Eijnden, J. L. et al.
+    "A Multiscale Modeling Framework for Accelerator Magnets Accounting
+    for Fabrication-Induced Deformation and Operational Strain in
+    Nb3Sn Rutherford Cables."
+    Superconductor Science and Technology (submitted).
+
+The workflow orchestrates several third-party tools that are NOT
+distributed with this software and remain governed by their own licenses:
+
+    - Ansys 2025 R2 (MAPDL, Mechanical, LS-DYNA)  --  Ansys Inc.
+    - FreeCAD 1.0.2                                --  LGPL
+    - ParaView 6.0.1                               --  BSD-3-Clause
+    - Docker Engine                                --  Apache-2.0
+
+The Ansys-bundled container images referenced by the pipeline are NOT
+redistributed; users must supply a container registry they have pull
+access to via the REGISTRY_PREFIX environment variable.

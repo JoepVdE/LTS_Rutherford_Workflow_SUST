@@ -1,0 +1,33 @@
+{
+  "title": "LTS Rutherford Cable Workflow: a multiscale simulation pipeline for Nb3Sn Rutherford cables",
+  "description": "Companion code for the SuST paper 'A Multiscale Modeling Framework for Accelerator Magnets Accounting for Fabrication-Induced Deformation and Operational Strain in Nb3Sn Rutherford Cables'. End-to-end automated pipeline: cable-parameter calculation, FreeCAD STEP geometry, Ansys Mechanical solid meshing, LS-DYNA compaction, ParaView deformed-strand extraction, APDL conformal submodel, 4-stage 2D MAPDL cablestack solve, and optional 3D compression-box magnetic coupling with per-strand Ic degradation.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "creators": [
+    {"name": "Van den Eijnden, Joep L.", "affiliation": "Institute of Electromagnetic Fields, ETH Zurich; Paul Scherrer Institut"},
+    {"name": "Kong, Xiang", "affiliation": "Department of Materials, ETH Zurich"},
+    {"name": "Araujo, Douglas", "affiliation": "Paul Scherrer Institut"},
+    {"name": "Auchmann, Bernhard", "affiliation": "Paul Scherrer Institut; CERN"},
+    {"name": "Brem, Andre", "affiliation": "Paul Scherrer Institut"},
+    {"name": "Tervoort, Theo A.", "affiliation": "Department of Materials, ETH Zurich"},
+    {"name": "Kario, Anna", "affiliation": "CERN; University of Twente"},
+    {"name": "Otten, Simon", "affiliation": "University of Twente"},
+    {"name": "Leuthold, Juerg", "affiliation": "Institute of Electromagnetic Fields, ETH Zurich"},
+    {"name": "Smajic, Jasmin", "affiliation": "Institute of Electromagnetic Fields, ETH Zurich"}
+  ],
+  "keywords": [
+    "Nb3Sn",
+    "Rutherford cable",
+    "accelerator magnet",
+    "superconductor",
+    "critical current",
+    "multiscale modeling",
+    "finite element",
+    "Ansys APDL",
+    "LS-DYNA",
+    "FCC-hh"
+  ],
+  "communities": [],
+  "grants": []
+}

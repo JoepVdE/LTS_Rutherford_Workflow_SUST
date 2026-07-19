@@ -8,10 +8,12 @@ version = "0.1.0"
 description = "End-to-end automated pipeline for Nb3Sn LTS Rutherford-cable simulation (FreeCAD -> Ansys Mechanical -> LS-DYNA -> ParaView -> MAPDL cablestack)."
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
+license = { text = "Apache-2.0" }
 keywords = ["lts", "nb3sn", "rutherford", "superconductor", "ansys", "ls-dyna", "mapdl", "freecad", "paraview"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Physics",
     "Operating System :: POSIX :: Linux",

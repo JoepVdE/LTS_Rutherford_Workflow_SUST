@@ -1,10 +1,11 @@
 # LTS Rutherford Cable Workflow
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21445515.svg)](https://doi.org/10.5281/zenodo.21445515)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Companion code for the SuST paper *"A Multiscale Modeling Framework for Accelerator Magnets Accounting for Fabrication-Induced Deformation and Operational Strain in Nb<sub>3</sub>Sn Rutherford Cables"*.
 
-**Cite this software as:** Van den Eijnden, J. L. et al. *LTS Rutherford Cable Workflow* (v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.21445515](https://doi.org/10.5281/zenodo.21445515) — the concept DOI always resolves to the latest release; use `10.5281/zenodo.21445516` for the exact v1.0.0 snapshot.
+**Cite this software as:** Van den Eijnden, J. L. et al. *LTS Rutherford Cable Workflow*. Zenodo. [https://doi.org/10.5281/zenodo.21445515](https://doi.org/10.5281/zenodo.21445515) — the concept DOI always resolves to the latest release; the [Zenodo record page](https://doi.org/10.5281/zenodo.21445515) lists per-version DOIs (e.g. v1.0.1 for the release contemporary with the paper).
 
 End-to-end automated pipeline for **Nb<sub>3</sub>Sn LTS Rutherford-cable** simulation. From a one-line cable preset, one Python entry point produces the deformed strand cross-section after compaction, four cyclic stress-strain curves (displacement / pressure × transverse / radial), and -- optionally -- a per-strand Ic-degradation estimate under the measured BOX9 magnet load schedule.
 
@@ -348,3 +349,15 @@ Every notebook button calls a `WorkflowRunner` method directly — no logic is d
 ## Where to start when something looks wrong
 
 Run-by-run state lives under `data/runs/<run>/` — start there. The `metadata.json` `workflow_steps` dict tells you which step failed; the matching log file (`LSDYNA/lsdyna_container.log`, `APDL/submodel/apdl_runfolder/mapdl_<stage>.log`) has the detail.
+
+---
+
+## License and copyright
+
+Copyright © 2026 ETH Zurich and Paul Scherrer Institut.
+
+This software is released under the **Apache License 2.0** — see [LICENSE](LICENSE) for the full text and [NOTICE](NOTICE) for the multi-institution attribution required by clause 4(d).
+
+Contributions of any kind (issues, PRs, patches) are welcome and are accepted under the same Apache-2.0 terms by way of submission (see clause 5 of the License).
+
+The workflow orchestrates several third-party tools that are NOT redistributed with this software and remain governed by their own licenses (Ansys, FreeCAD, ParaView, Docker) — see [NOTICE](NOTICE) for the list.
