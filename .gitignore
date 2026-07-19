@@ -45,7 +45,7 @@ scripts/apdl/test/gps_minimal/gps_test*
 .vscode/settings.json
 .idea/
 
-# Claude Code local settings
+# Local AI-assistant settings
 .claude/
 
 # OS
