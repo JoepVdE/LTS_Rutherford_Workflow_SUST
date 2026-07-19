@@ -1,0 +1,32 @@
+! =================================================================
+! ==== shared solver settings (included by every 5-BC-* deck) =====
+! =================================================================
+! Called via /INPUT at the start of each BC deck's solution phase.
+! Single source for the nonlinear solver options and the results-output
+! policy -- a tuning change here lands in every load stage at once
+! instead of being copy-pasted nine times.
+
+!! Solution
+/solu
+nropt,unsymmetric   ! unsymmetric Newton-Raphson (frictional contact)
+neqit,50            ! max equilibrium iterations per substep
+nlgeom,on           ! large-deflection effects
+AUTOTS, ON          ! automatic substepping
+DELTIM,0.05,,,ON
+CUTCONTROL,PLSLIMIT,1
+
+! Results-output policy. The postprocess decks (7-PP, 8-PP-*) read nodal
+! displacements + reaction forces at EVERY substep (fd curves) but element
+! data only at the current set when they run (area_summary via ETABLE,VOLU).
+! Writing the full element solution at every substep (the old outres,all,all)
+! inflates the .rst by roughly an order of magnitude for data nothing reads.
+! Set full_output = 1 below to restore write-everything (debug / field plots).
+full_output = 0
+*IF,full_output,EQ,1,THEN
+    outres,all,all
+*ELSE
+    outres,all,none
+    outres,nsol,all     ! nodal DOF solution, every substep
+    outres,rsol,all     ! reaction loads, every substep
+    outres,esol,last    ! element solution, last substep of each load step
+*ENDIF
