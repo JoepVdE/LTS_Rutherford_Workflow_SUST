@@ -1,6 +1,10 @@
 # LTS Rutherford Cable Workflow
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21445515.svg)](https://doi.org/10.5281/zenodo.21445515)
+
 Companion code for the SuST paper *"A Multiscale Modeling Framework for Accelerator Magnets Accounting for Fabrication-Induced Deformation and Operational Strain in Nb<sub>3</sub>Sn Rutherford Cables"*.
+
+**Cite this software as:** Van den Eijnden, J. L. et al. *LTS Rutherford Cable Workflow* (v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.21445515](https://doi.org/10.5281/zenodo.21445515) — the concept DOI always resolves to the latest release; use `10.5281/zenodo.21445516` for the exact v1.0.0 snapshot.
 
 End-to-end automated pipeline for **Nb<sub>3</sub>Sn LTS Rutherford-cable** simulation. From a one-line cable preset, one Python entry point produces the deformed strand cross-section after compaction, four cyclic stress-strain curves (displacement / pressure × transverse / radial), and -- optionally -- a per-strand Ic-degradation estimate under the measured BOX9 magnet load schedule.
 
